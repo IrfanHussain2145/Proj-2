@@ -9,7 +9,11 @@ import Foundation
 
 // TODO: Pt 1 - Create a Track model struct
 
-struct Track {
+struct TracksResponse: Decodable {
+    let results: [Track]
+}
+
+struct Track: Decodable {
     let trackName: String // Movie Name
     let artistName: String // Description
     let artworkUrl100: URL // Picture
